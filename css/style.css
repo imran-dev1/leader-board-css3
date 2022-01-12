@@ -201,6 +201,9 @@ hr{
     color:#FFC014;
     margin:-2px;
 }
+.course_rating span{
+    margin-left:5px;
+}
 
 .course_duration{
     background-color: #FFE4E8;
@@ -247,7 +250,7 @@ width:30px;
 /* Media Queries */
 @media (max-width:688px){
     #top_section .container{
-        padding: 20px;px;
+        padding: 20px;
     }
     .player-content{
         grid-template-columns: repeat(2,1fr);
@@ -257,5 +260,8 @@ width:30px;
     }
     .courses{
         grid-template-columns: repeat(1,1fr);
+    }
+    #latest_course .container{
+        padding:20px;
     }
 }
