@@ -1,0 +1,261 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Base Styles */
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #F3F1FF;
+}
+.container{
+    max-width: 870px;
+    margin:0 auto;
+    padding:0 20px;
+}
+section{
+    margin:10px;
+}
+/* Animation */
+
+@keyframes slideDown {
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes fadeSlide {
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Header Styles  */
+header{
+    background: #562EFF;
+    padding:10px 0;
+    animation: slideDown 1s ease .0s 1;
+}
+
+header .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display:flex;
+}
+.logo img{
+    width:45px;
+}
+.navigation{
+    display:flex;
+}
+.navigation-items{
+    display:flex;
+    align-items: center;
+
+
+}
+.navigation-items li{
+    list-style: none;
+    padding:0 20px;
+}
+.navigation-items li a{
+    color:#ffffff;
+    text-decoration: none;
+
+}
+.navigation-items li a:hover{
+    color:#FF4A60;
+}
+.avatar{
+    display:flex;
+    align-items: center;;
+}
+
+/* Player Section */
+
+#top_section .container{
+    background-color: #fff;
+    margin-top:40px;
+    padding:30px;
+    border-radius:5px;
+    animation: fadeSlide 1.5s ease 0s 1;
+}
+.section_title{
+    margin-bottom:30px;
+    color: #562EFF;
+    font-size:20px;
+}
+.player-content{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+}
+.single_player{
+    display:flex;
+    align-items: center;
+    box-shadow: 0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05);
+    padding:15px;
+    border-radius:100px;
+}
+.single_player:hover{
+    box-shadow: 0px 5.34229px 13.3557px rgb(0 0 0 / 13%);
+    cursor:pointer;
+}
+.player-image{
+    margin-right:10px;
+    display:flex;
+}
+.player-image img{
+    width:56px;
+    height:56px;
+}
+hr{
+    border-top:1px solid #f5f5f5;
+    margin:30px 0;
+}
+
+/* Blog section */
+
+.blog-content{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:15px;
+}
+.single_blog{
+    display:flex;
+    animation: slideRight .7s ease .1s 1;
+    box-shadow: 0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05);
+    padding:15px;
+    border-radius:20px;
+}
+.blog-image{
+    display:flex;
+    flex:1
+}
+.blog-text{
+    flex:1;
+    padding-left:15px;
+}
+.blog-image img{
+    width:100%;
+}
+.blog-author{
+    margin-top:5px;
+}
+.blog-author span{
+    color:#562EFF
+}
+
+/* Latest Course Section  */
+
+#latest_course .container{
+    background-color: #fff;
+    margin:20px auto;
+    padding:30px;
+    border-radius:5px;
+    animation: fadeSlide 2s ease 0s 1;
+}
+.courses{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:15px;
+}
+.single_course{
+    box-shadow: 0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05);
+    padding:15px;
+    border-radius:20px;
+}
+.single_course:hover,.single_blog:hover {
+    box-shadow: 0px 5.34229px 13.3557px rgb(0 0 0 / 13%);
+    cursor:pointer;
+}
+.course_banner img{
+    width:100%;
+}
+.instructor{
+    color:#ED6B4F;
+    font-size:15px;
+}
+.course_bottom{
+    margin-top:25px;
+    display: flex;
+    justify-content: space-between;
+}
+.course_rating [name="star"]{
+    color:#FFC014;
+    margin:-2px;
+}
+.course_rating [name="star-outline"]{
+    color:#FFC014;
+    margin:-2px;
+}
+
+.course_duration{
+    background-color: #FFE4E8;
+    padding: 0 7px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+ion-icon.icon {
+    margin-top: 5px;
+    margin-right: 5px;
+    color:#FF4A60;
+}
+.course_duration .time{
+    font-size:13px;
+    color:#FF4A60;
+}
+
+/* Footer Area Styles  */
+#footer_area .container{
+    background-color: #562EFF;
+    padding: 10px 30px;
+    border-radius:5px 5px 0 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeSlide 2.5s ease 0s 1;
+}
+#footer_area .logo img{
+width:30px;
+}
+.social_icons{
+    display: flex;
+}
+.social_icons ion-icon{
+    margin-left:15px;
+    font-size:20px;
+    color:#fff;
+}
+.social_icons ion-icon:hover{
+    color:#FF4A60;
+}
+
+/* Media Queries */
+@media (max-width:688px){
+    #top_section .container{
+        padding: 20px;px;
+    }
+    .player-content{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .blog-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .courses{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
